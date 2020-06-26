@@ -2,7 +2,10 @@
 
 <h3>Add New Bug</h3>
 
+
+
 <EditForm OnValidSubmit="HandleValidSubmit" Model="AddBug">
+    <ValidationSummary />
     <InputText @bind-Value="@AddBug.Title" placeholder="Enter Title" />
     <InputText @bind-Value="@AddBug.Description" placeholder="Enter Description" />
     <InputNumber @bind-Value="@AddBug.Priority" placeholder="Enter Priority" />
@@ -15,6 +18,7 @@
 
     [Inject]
     public NavigationManager NavService { get; set; }
+
 
     public Bug AddBug { get; set; } = new Bug();
 
