@@ -2,9 +2,8 @@
 
 <h3>Add New Bug</h3>
 
-
-
 <EditForm OnValidSubmit="HandleValidSubmit" Model="AddBug">
+    <DataAnnotationsValidator />
     <ValidationSummary />
     <InputText @bind-Value="@AddBug.Title" placeholder="Enter Title" />
     <InputText @bind-Value="@AddBug.Description" placeholder="Enter Description" />
@@ -19,7 +18,6 @@
     [Inject]
     public NavigationManager NavService { get; set; }
 
-
     public Bug AddBug { get; set; } = new Bug();
 
     protected void HandleValidSubmit()
@@ -28,4 +26,3 @@
         NavService.NavigateTo("");
     }
 }
-
