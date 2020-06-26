@@ -1,9 +1,15 @@
-﻿
-@ModelBinderAttribute =
-<h3>EditForm</h3>
+﻿@inherits LayoutComponentBase
 
+<nav class="sidebar">
+    <LeftNav />
+</nav>
 
+<div class="main">
+    <div class="top-row px-4">
+        <h1>Welcome to the Bug Tracker app!</h1>
+    </div>
 
-@code {
-
-}
+    <div class="content px-4">
+        @Body
+    </div>
+</div>
